@@ -3,31 +3,31 @@ package com.example.javacrash.Methods;
 public class KmToMiles {
     public static void main(String[] args) {
         double milesToKm = toMilesPerHour(75.114);
-        System.out.println(milesToKm);
+
+        printConversion(1.25);
+
+        //int conversion = Math.round(printConversion(-5.6));
     }
 
 
     public static long toMilesPerHour(double kilometersPerHour) {
 
-        int milesPerHours = 0;
-
         if (kilometersPerHour < 0) {
-            milesPerHours = -1;
-        } else if (kilometersPerHour > 0) {
-            int milesPerHour = 0;
-            if (kilometersPerHour == 1.5) {
-                milesPerHour = 1;
-            } else if (kilometersPerHour == 10.25) {
-                milesPerHour = 6;
-            } else if (kilometersPerHour == -5.6) {
-                milesPerHour = -1;
-            } else if (kilometersPerHour == 25.42) {
-                milesPerHour = 16;
-            } else if (kilometersPerHour == 75.114) {
-                milesPerHour = 47;
-            }
-            return milesPerHour;
+            return -1;
+        } else {
+            return Math.round(kilometersPerHour / 1.609);
         }
-        return milesPerHours;
     }
+
+    public static void printConversion(double kilometersPerHour) {
+
+        long milesPerHour = toMilesPerHour(kilometersPerHour);
+        if (kilometersPerHour < 0) {
+            System.out.println("Invalid Value");
+        } else {
+            System.out.println(kilometersPerHour + " km/h = " + toMilesPerHour(kilometersPerHour) + " mi/h");
+        }
+
+    }
+
 }
