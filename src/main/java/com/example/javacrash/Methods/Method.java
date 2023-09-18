@@ -1,11 +1,17 @@
 package com.example.javacrash.Methods;
 
 public class Method  {
-    public static void calculateScore() {
-        boolean gameOver = true;
-        int score = 800;
-        int levelCompleted = 5;
-        int bonus = 100;
+
+    public static void main(String[] args) {
+
+
+        calculateScore(true, 900, 5 ,100);
+        calculateScore(true, 8000, 8,200);
+
+        System.out.println("Your age is  "+calculateAge(1999));
+    }
+    public static void calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
+
         int finalScore = score;
 
 
@@ -16,24 +22,10 @@ public class Method  {
         }
 
     }
-    public static void main(String[] args) {
-        boolean gameOver = true;
-        int score = 800;
-        int levelCompleted = 5;
-        int bonus = 100;
-        int finalScore = score;
 
+    public static int calculateAge(int birthDate){
+        return 2023-birthDate;
 
-        calculateScore();
-
-        score = 10000;
-        levelCompleted = 8;
-        bonus = 160;
-        finalScore = score;
-        if(gameOver){
-            finalScore += (levelCompleted + bonus);
-            finalScore += 1000;
-            System.out.println("Your second final score is " + finalScore);
-        }
     }
+
 }
