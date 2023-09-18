@@ -16,16 +16,17 @@ public class MethodChallange {
         System.out.println(playerName + " managed to get into position " + position + " on the high score list");
     }
     public static int calculateHightScorePosition(int playerScore){
-
                 int positioning = 4;
                 if(playerScore >= 1000){
                     positioning = 1;
-                } else if (playerScore >= 500 ) {
+                } else if (playerScore >= 500 && playerScore < 1000) {
                     positioning = 2;
-                } else if (playerScore >= 100   ) {
+                } else if (playerScore >= 100 && playerScore < 500) {
                     positioning = 3;
                 }
-
+                else {
+                    positioning = 4;
+                }
                 return  positioning;
     }
 }
