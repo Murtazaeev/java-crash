@@ -22,27 +22,16 @@ public class sum3and5challange {
 
 
     public static boolean isOdd(int number) {
-        return (number > 0 && number % 2 != 0) ? true : false;
+        return (number > 0 && number % 2 != 0);
     }
-
-
-
     public static int sumOdd(int start, int end) {
+        if ((start > end) || start < 0)  return -1;
         int sumOfOdd = 0;
-        if ((start > end) || start < 0 || end < 0) {
-            sumOfOdd = -1;
-        } else {
-            for (int i = start; i <= end; i++) {
-                if (isOdd(i)) {
-                    sumOfOdd = sumOfOdd + i;
-                } else {
-                    return -1;
-                }
+        for (int i = start; i <= end; i++) {
+            if (isOdd(i)) {
+                sumOfOdd += i;
             }
-
         }
-
-
         return sumOfOdd;
     }
 }
