@@ -34,4 +34,27 @@ public class sum3and5challange {
         }
         return sumOfOdd;
     }
+
+
+    // public static boolean isPalindrome (int number) {
+    //     String num = Integer.toString(number);
+    //     StringBuilder newNum = new StringBuilder();
+    //     newNum.append(num);
+    //     newNum.reverse();
+
+    //     return number == Integer.parseInt(newNum.toString());
+    // }
+
+    public static boolean isPalindrome (int number) { // 1221
+        int reverse = 0;
+        int wholeNumb = number;
+
+        while (wholeNumb != 0) {
+            int lastDigit = wholeNumb % 10;  // lastDigit = 1, 2, 2, 1
+            reverse = reverse  * 10 + lastDigit; // 1, 12, 2, 1
+            wholeNumb /= 10; //wholeNumb = 122, 12, 1, 0
+
+        }
+        return (reverse == number);
+    }
 }
