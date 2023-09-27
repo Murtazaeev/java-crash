@@ -18,6 +18,8 @@ public class Customer {
 
     public Customer(String name, String email) {
         this(name, 2000, email);
+        System.out.println();
+
     }
 
     public Customer(String name, int creditLimit, String email) {
