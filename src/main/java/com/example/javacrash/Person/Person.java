@@ -37,15 +37,21 @@ public class Person {
     }
 
     public boolean isTeen(){
-        if(age > 12 && age < 20){
+        if(this.age > 12 && this.age < 20) {
             return true;
         } else {
-            return  false;
+            return false;
         }
     }
 
-    public void getFullName() {
-        if(firstName == null || secondName == null) System.out.println("one of the fields are null");
-
+    public String getFullName() {
+        if (this.firstName.isEmpty() && this.secondName.isEmpty()) {
+            return "";
+        } else if (this.firstName.isEmpty()) {
+            return secondName;
+        } else if (this.secondName.isEmpty()) {
+            return firstName;
+        }
+        return firstName + " " + secondName;
     }
 }
