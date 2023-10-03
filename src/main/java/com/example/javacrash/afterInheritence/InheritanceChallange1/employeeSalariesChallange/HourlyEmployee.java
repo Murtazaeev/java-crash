@@ -1,4 +1,4 @@
-package com.example.javacrash.afterInheritence.InheritanceChallange1;
+package com.example.javacrash.afterInheritence.InheritanceChallange1.employeeSalariesChallange;
 
 public class HourlyEmployee extends Employee{
     private double hourlyPayRate;
@@ -20,3 +20,29 @@ public class HourlyEmployee extends Employee{
         setHourlyPayRate(hourlyPayRate * 2);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

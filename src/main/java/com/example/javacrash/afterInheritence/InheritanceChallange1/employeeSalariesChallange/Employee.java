@@ -1,6 +1,7 @@
-package com.example.javacrash.afterInheritence.InheritanceChallange1;
+package com.example.javacrash.afterInheritence.InheritanceChallange1.employeeSalariesChallange;
 
 public class Employee extends Worker {
+
 
     private long employeeId;
     private String hireDate;

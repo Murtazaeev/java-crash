@@ -1,4 +1,4 @@
-package com.example.javacrash.afterInheritence.InheritanceChallange1;
+package com.example.javacrash.afterInheritence.InheritanceChallange1.employeeSalariesChallange;
 
 public class SalariedEmployee extends Employee {
 
@@ -29,5 +29,12 @@ public class SalariedEmployee extends Employee {
 
     public void retire(){
         setRetired(true);
+        terminate("12/12/2025");
+        isRetired = true;
+    }
+    
+    @Override
+    public double collectPay() {
+        return (int) annualSalary / 26;
     }
 }

@@ -1,4 +1,4 @@
-package com.example.javacrash.afterInheritence.InheritanceChallange1;
+package com.example.javacrash.afterInheritence.InheritanceChallange1.employeeSalariesChallange;
 
 public class Worker {
 
@@ -17,6 +17,8 @@ public class Worker {
         temur2.getDoublePay();
         System.out.println("after\t\t\t" + temur2.getHourlyPayRate());
 
+
+
     }
 
     private String name;
@@ -33,11 +35,11 @@ public class Worker {
         return 23;
     }
 
-    public double collectPay(double pay) {
-        return  pay;
+    public double collectPay() {
+        return  0.0;
     }
     public void terminate(String endDate){
-
+        this.endDate = endDate;
     }
 
     @Override
